@@ -186,7 +186,7 @@ width: 100%; height: 600px; padding: 50px; display: flex;}
     .profile div:first-child>p:nth-child(4){font-size: 16px;}
 
     /* skills */
-    .skills {flex-direction: column; align-items: center; padding: 20px;}
+    .skills {flex-direction: column; align-items: center; padding: 20px; font-size: 13px;}
     .skills_left, .skills_middle, .skills_right {width: 100%; margin-bottom: 20px;}
     .skill_title {font-size: 25px; text-align: left;}
     .java, .c, .mysql, .eclips, .vscode, .sts, .figma,
@@ -205,7 +205,7 @@ width: 100%; height: 600px; padding: 50px; display: flex;}
     }
     .sub_header .top div{width: 450px;}
     /* about me */
-    .aboutme { flex-direction: row; font-size: 13px; padding: 50px;}
+    .aboutme { flex-direction: row; font-size: 14px; padding: 50px;}
     .aboutme_left, .aboutme_right { width: 50%; }
     .links div:nth-child(2)>p:nth-child(3){
         margin-left: 50px;
@@ -223,7 +223,7 @@ width: 100%; height: 600px; padding: 50px; display: flex;}
     .profile div:first-child>p:nth-child(4){font-size: 16px;}
 
     /* skills */
-    .skills {flex-direction: column; align-items: center; padding: 50px;}
+    .skills {flex-direction: column; align-items: center; padding: 50px; font-size: 14px;}
     .skills_left, .skills_middle, .skills_right {width: 100%; margin-bottom: 20px;}
     .skill_title {font-size: 25px; text-align: left;}
     .java, .c, .mysql, .eclips, .vscode, .sts, .figma,
@@ -260,7 +260,7 @@ width: 100%; height: 600px; padding: 50px; display: flex;}
     .profile div:first-child>p:nth-child(4){font-size: 18px;}
 
     /* skills */
-    .skills {flex-direction: row; align-items: baseline; padding: 50px;}
+    .skills {flex-direction: row; align-items: baseline; padding: 50px; font-size: 14px;}
     .skills_left, .skills_middle, .skills_right {width: 100%; margin-bottom: 20px;}
     .skill_title {font-size: 35px; text-align: center;}
     .java, .c, .mysql, .eclips, .vscode, .sts, .figma,
