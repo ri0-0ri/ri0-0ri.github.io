@@ -56,8 +56,8 @@
                 <div class="profile">
                     <div>
                         <img src="/images/icon/user.png" alt="">
-                        <p>윤혜정</p>
-                        <p>HEY JEONG YOON</p>
+                        <p class="bbf">윤혜정</p>
+                        <p class="bbf">HEY JEONG YOON</p>
                         <p>2000.11.27</p>
                     </div>
                     <div>
@@ -75,13 +75,13 @@
                     <img src="/images/icon/link.png" alt="">
                     <div>
                         <img src="/images/icon/tistory.jpeg" alt="">
-                        <p>Tistory</p>
-                        <p>https://ri0-0ri.tistory.com/</p>
+                        <p class="bf">Tistory</p>
+                        <p><a href="https://ri0-0ri.tistory.com/">https://ri0-0ri.tistory.com/</a></p>
                     </div>
                     <div>
                         <img src="/images/icon/github.jpeg" alt="">
-                        <p>Git Hub</p>
-                        <p>https://github.com/ri0-0ri</p>
+                        <p class="bf">Git Hub</p>
+                        <p><a href="https://github.com/ri0-0ri">https://github.com/ri0-0ri</a></p>
                     </div>
                 </div>
             </div>
@@ -89,15 +89,15 @@
             <div class="aboutme_right">
                 <div class="school">
                     <img src="/images/icon/학력.png" alt="">
-                    <p>24.02 경기대학교 졸업</p>
+                    <p class="bf">24.02 경기대학교 졸업</p>
                     <p>러시아어문 전공</p>
                     <p>무역학부 복수전공</p>
-                    <p>24.12 공공데이터 융합 자바개발자 양성과정 수료</p>
+                    <p class="bf">24.12 공공데이터 융합 자바개발자 양성과정 수료</p>
                 </div>
                 <div class="aboutme_line"></div>
                 <div class="email">
                     <img src="/images/icon/email.png" alt="">
-                    <p>vveinerra@gmail.com</p>
+                    <p class="bf">vveinerra@gmail.com</p>
                 </div>
                 <div class="aboutme_line"></div>
                 <div class="license">
@@ -113,7 +113,69 @@
             </div>
         </div>
 
-        <div class="skills"></div>
+        <div class="skills">
+            <div class="skills_left">
+                <p class="skill_title">LANGUAGE</p>
+                <div class="languagebox">
+                    <div class="java">JAVA</div>
+                    <p>제 1언어로 사용합니다. Spring Framwork, JDBC 등 자바 관련 기술을 활용하여 개발하였습니다.</p>
+                    <div class="c">C</div>
+                    <p>학습 경험을 가지고 있으며 제 2언어로 키우기 위해 공부 중입니다.</p>
+                </div>
+                <p class="skill_title" style="margin-top: 20px;">DataBase</p>
+                <div class="databasebox">
+                    <div class="mysql">MySQL</div>
+                    <p>주요 데이터베이스로 사용, RDBMS 기반 관리를 수행하였습니다.</p>
+                </div>
+                <p class="skill_title" style="margin-top: 20px;">Tool</p>
+                <div class="toolbox">
+                    <div class="eclips">Eclips</div>
+                    <div class="vscode">VS Code</div>
+                    <div class="sts">STS</div>
+                    <div class="figma">Figma</div>
+                </div>
+            </div>
+            <div class="skills_middle">
+                <p class="skill_title">Front-End</p>
+                <div class="frontendbox">
+                    <div class="javascript">JavaScript</div>
+                    <p>ES6 이상의 최신 문법과 기능을 활용하여 개발합니다.</p>
+                    <div class="jquery">JQuery</div>
+                    <p>jQuery 문법에 익숙하며 주로 ajax 요청을 이용한 비동기 방식의 개발을 자주 사용합니다.</p>
+                    <div class="designbox">
+                        <div class="html">HTML5</div>
+                        <div class="css">CSS3</div>
+                    </div>
+                    <p>HTML5와 CSS3 문법을 사용하여 깔끔하고 직관적인 사용자 인터페이스(UI) 를 구현하며,
+                        다양한 기기에 맞는 반응형 디자인을 구현한 경험이 있습니다.
+                    </p>
+                    <div class="react">React</div>
+                    <p>React의 컴포넌트 기반 아키텍처와 React Hooks를 활용한 학습 경험이 있습니다.</p>
+                </div>
+            </div>
+            <div class="skills_right">
+                <p class="skill_title">Back-End</p>
+                <div class="backendbox">
+                    <div class="spring">Spring</div>
+                    <p>스프링 부트 기반의 개발 환경에 익숙하며 주요 기능인 의존성 관리, 자동화된 설정, 내장 서버 등을 활용하여
+                        효율적이고 빠른 개발을 수행하였습니다.</p>
+                    <p>Maven을 통해 프로젝트 의존성을 관리하였습니다.</p>
+                    <p>
+                        MVC 모델의 컨트롤러, 서비스, DAO 계층 구조를 설계한 경험이 있으며 해당 패턴을 적용한 프로젝트를 다수 개발했습니다.
+                    </p>
+                    <p>
+                        동적 UI 개발 및 데이터 바인딩, 반복 처리 등을 Thymeleaf 구문을 통해 구현했습니다.
+                    </p>
+
+                    <div class="jsp">JSP & Servlet</div>
+                    <p>Tomcat 서버를 활용하여 Servlet을 통해 비즈니스 로직을 처리하고, 
+                        JSP를 통해 사용자 인터페이스(UI)를 동적으로 렌더링한 경험이 있습니다.</p>
+
+                    <div class="mybatis">MyBatis</div>
+                    <p>Mybatis를 활용하여 데이터베이스와의 연동을 관리하였습니다.</p>
+                </div>
+            </div>
+        </div>
         <div class="project"></div>
         <div class="contectme"></div>
     </div>
