@@ -3,23 +3,43 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 li{list-style: none;}
 a{text-decoration: none; color: inherit;}
-body{background-color: #0E162B;}
+body{background-color: #3E5547;}
 
 /* font */
-header div a, .skill_title, .java, .c, .mysql, .eclips, .vscode, .sts, .figma,
-.javascript, .jquery, .html, .css, .react, .spring, .jsp, .mybatis
-{
-  font-family: "Jaro";
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
+@font-face {
+    font-family: 'FuturaPT E-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/font/FuturaCyrillicExtraBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Futura PT Heavy';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/font/FuturaCyrillicHeavy.woff') format('woff');
+}
+@font-face {
+    font-family: 'Futura PT Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/font/FuturaCyrillicBold.woff') format('woff');
 }
 .sub_header div{
-    font-family: "Jaro";
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 80px;
+    font-family: 'FuturaPT E-Bold';
+}
+header div a, .skill_title{
+    font-family: 'Futura PT Bold';
+}
+.java, .c, .mysql, .eclips, .vscode, .sts, .figma,
+.javascript, .jquery, .html, .css, .react, .spring, .jsp, .mybatis,
+.notion, .github, .erd, .canva, .discord,
+.project_title, .project_nav, .imgbtn
+{
+  /* font-family: "Jaro";
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal; */
+  font-family: 'Futura PT Heavy';
 }
 .wrap{
     font-family: "Gothic A1", serif;
@@ -29,9 +49,10 @@ header div a, .skill_title, .java, .c, .mysql, .eclips, .vscode, .sts, .figma,
 
 body{padding-top: 80px;}
 /* 헤더 */
-header{width: 100%; height: 80px; display: flex; align-items: center; justify-content: space-between;
-    color: #fff; background-color: #0E162B; position: fixed; top: 0; left: 0; right: 0; border-bottom: 2px solid #fff;
-    border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;}
+header{width: 100%; height: 70px; display: flex; align-items: center; justify-content: space-between;
+    color: #fff; background-color: #3E5547; position: fixed; top: 0; left: 0; right: 0; border-bottom: 2px solid #fff; z-index: 5;}
+.header_sc{color: #3E5547; background-color: #fff;}
+.nav_sc{color: #F2E677;}
 .logo a{font-size: 30px; margin-left: 30px;}
 .nav{font-size: 25px; margin-right: 30px;}
 .nav ul{display: flex; gap: 30px;}
@@ -41,13 +62,14 @@ header{width: 100%; height: 80px; display: flex; align-items: center; justify-co
 .sub_header .top :nth-child(2){padding-bottom: 20px;}
 .sub_header .middle{margin-top: 20px;}
 .sub_header .bottom{margin-top: 50px; padding: 10px;
-    color: #8193B2; border: 1px solid #8193B2; background-color: #0E162B; border-radius: 10px;}
+    color: #8193B2; border: 2px solid #8193B2; background-color: #EEEAE6; border-radius: 5px;}
 
-.wrap{width: 100%; padding: 50px; margin: 0 auto;}
+.wrap{width: 100%; margin: 0 auto;}
 /* about me */
+.aboutme_wrap{padding: 50px;}
 .aboutme{background-color: #fff; border-radius: 5px; color: #4f4f4f;
-width: 100%; height: 100%; padding: 50px; display: flex; justify-content: space-around;}
-.aboutmiddle{margin: 0 50px;}
+width: 100%; height: 100%; padding: 50px; display: flex; margin-top: 100px;}
+.aboutmiddle{margin: 0 100px;}
 .profile p:nth-child(1){
     font-family: "Inter", serif;
     font-weight: 600;
@@ -70,51 +92,107 @@ width: 100%; height: 100%; padding: 50px; display: flex; justify-content: space-
 .major, .licensebox p:nth-child(13){grid-column: span 2; font-size: 14px; padding-left: 80px; color: #7a7a7a;}
 
 /* skills */
-.skills{width: 100%; height: 100%; background-color: #fff; border-radius: 5px; font-size: 14px;
-    color: #4f4f4f; display: flex; padding: 50px; margin-top: 100px;}
+.skills{width: 100%; height: 100%; background-color: #EEEAE6;font-size: 14px;
+    color: #4f4f4f; display: flex; padding: 100px; margin-top: 150px;}
 .skills_middle{margin: 0 50px;}
 .skills_left, .skills_middle, .skills_right{width: 400px;}
-.skill_title{font-size: 35px; text-align: center; margin-bottom: 10px; color: #0E162B;}
-.languagebox, .databasebox, .toolbox, .frontendbox, .backendbox{border: 2px solid #d9d9d9; padding: 10px;}
+.skill_title{font-size: 35px; text-align: center; margin-bottom: 10px; color: #3a3a3a;}
+.languagebox, .databasebox, .toolbox, .frontendbox, .backendbox{border: 2px solid #d9d9d9; padding: 20px; background-color: #fff;}
 .toolbox{display: grid; grid-template-columns: 1fr 1fr; place-items: center;}
 .java{font-size: 18px; color: #fff; background-color: #DC8236; width: fit-content;
-    padding: 5px 10px; border-radius: 8px; margin-bottom: 10px;}
+    padding: 5px 10px; border-radius: 6px; margin-bottom: 10px;}
 .c{font-size: 18px; color: #fff; background-color: #3A47A0; width: fit-content;
-    padding: 5px 20px; border-radius: 8px; margin: 20px 0 10px 0;}
+    padding: 5px 20px; border-radius: 6px; margin: 20px 0 10px 0;}
 .mysql{font-size: 18px; color: #fff; background-color: #3E6389; width: fit-content;
-    padding: 5px 20px; border-radius: 8px; margin-bottom: 10px;}
+    padding: 5px 20px; border-radius: 6px; margin-bottom: 10px;}
 .eclips{font-size: 18px; color: #fff; background-color: #28204F; width: fit-content;
-    padding: 5px 20px; border-radius: 8px; margin-bottom: 10px;}
+    padding: 5px 20px; border-radius: 6px; margin-bottom: 10px;}
 .vscode{font-size: 18px; color: #fff; background-color: #3478C6; width: fit-content;
-    padding: 5px 20px; border-radius: 8px; margin-bottom: 10px;}
+    padding: 5px 20px; border-radius: 6px; margin-bottom: 10px;}
 .sts{font-size: 18px; color: #fff; background-color: #4C8D45; width: fit-content;
-    padding: 5px 20px; border-radius: 8px;}
+    padding: 5px 20px; border-radius: 6px;}
 .figma{font-size: 18px; color: #fff; background-color: #E77666; width: fit-content;
-    padding: 5px 20px; border-radius: 8px;}
+    padding: 5px 20px; border-radius: 6px;}
 .javascript{font-size: 18px; color: #fff; background-color: #EBD94D; width: fit-content;
-    padding: 5px 20px; border-radius: 8px; margin-bottom: 10px;}
+    padding: 5px 20px; border-radius: 6px; margin-bottom: 10px;}
 .jquery{font-size: 18px; color: #fff; background-color: #2C63A1; width: fit-content;
-    padding: 5px 20px; border-radius: 8px; margin: 20px 0 10px 0;}
+    padding: 5px 20px; border-radius: 6px; margin: 20px 0 10px 0;}
 .html{font-size: 18px; color: #fff; background-color: #E15527; width: fit-content;
-    padding: 5px 20px; border-radius: 8px; margin: 20px 0  10px 0;}
+    padding: 5px 20px; border-radius: 6px; margin: 20px 0  10px 0;}
 .css{font-size: 18px; color: #fff; background-color: #2E4AD5; width: fit-content;
-    padding: 5px 20px; border-radius: 8px; margin: 20px 0 10px 10px;}
+    padding: 5px 20px; border-radius: 6px; margin: 20px 0 10px 10px;}
 .react{font-size: 18px; color: #fff; background-color: #7ED0EF; width: fit-content;
-    padding: 5px 20px; border-radius: 8px; margin: 20px 0 10px 0;}
+    padding: 5px 20px; border-radius: 6px; margin: 20px 0 10px 0;}
 .designbox{display: flex; align-items: center;}
 .spring{font-size: 18px; color: #fff; background-color: #86BB55; width: fit-content;
-    padding: 5px 20px; border-radius: 8px; margin-bottom: 10px;}
+    padding: 5px 20px; border-radius: 6px; margin-bottom: 10px;}
 .jsp{font-size: 18px; color: #fff; background-color: #08C2FF; width: fit-content;
-    padding: 5px 20px; border-radius: 8px; margin: 20px 0  10px 0;}
+    padding: 5px 20px; border-radius: 6px; margin: 20px 0  10px 0;}
 .mybatis{font-size: 18px; color: #fff; background-color: #000; width: fit-content;
-    padding: 5px 20px; border-radius: 8px; margin: 20px 0  10px 0;}
+    padding: 5px 20px; border-radius: 6px; margin: 20px 0  10px 0;}
 .backendbox p:nth-child(3), .backendbox p:nth-child(4), .backendbox p:nth-child(5){margin-top: 10px;}
 
+/* project */
+.project_wrap{padding: 50px;}
+.project{position: relative; width: 100%; margin-top: 150px; display: grid; grid-template-columns: 1fr 1fr; justify-items: center; gap: 50px; color: #3a3a3a;}
+.project_title{margin-bottom: 20px; font-size: 25px; color: #f2e677;}
+.project_view{width: 600px; height: 400px; background-color: #fff;
+    border-radius: 5px; padding: 20px;}
+.project_time{margin: 30px 0;}
+.project_view>div>div{margin: 10px 0;}
+.light{width: 16px;}
+.view:hover{transform: scale(1.03); transition: transform 0.3s ease; cursor: pointer;}
+.info{display: none;}
+.info .project_title{position: absolute; top: 0; left: 0;}
+.project_info{width: 100%; display: flex; position: absolute; top: 65px; left: 0;}
+.project_nav>ul>li{color: #8193B2; padding: 15px 20px;}
+.project_nav>ul>li.on{background-color: #fff; border: none;}
+.infobox{background-color: #fff; width: 1200px; padding: 40px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
+
+.info_top{display: grid; grid-template-columns: 1fr 1fr; gap: 100px;}
+.info_top>div>div>div{margin-bottom: 20px;}
+.info_part>div, .my_part>div{margin-bottom: 20px;}
+.info_top{margin-bottom: 100px;}
+/* .project_skills>div:nth-child(2){display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; gap: 10px;} */
+.project_skills>div:nth-child(2){display: flex; flex-wrap: wrap; gap: 10px;}
+.project_skills>div:nth-child(2)>div{font-size: 13px;}
+.project_skills div{margin: 0;}
+.project_tools{margin-top: 50px;}
+.notion{font-size: 18px; color: #fff; background-color: #000; width: fit-content;
+    padding: 5px 20px; border-radius: 6px;}
+.github{font-size: 18px; color: #fff; background-color: #EA4AAA; width: fit-content;
+    padding: 5px 20px; border-radius: 6px;}
+.erd{font-size: 18px; color: #fff; background-color: #9188F4; width: fit-content;
+    padding: 5px 20px; border-radius: 6px;}
+.canva{font-size: 18px; color: #fff; background-color: #6D50DB; width: fit-content;
+    padding: 5px 20px; border-radius: 6px;}
+.discord{font-size: 18px; color: #fff; background-color: #757DF0; width: fit-content;
+    padding: 5px 20px; border-radius: 6px;}
+.project_tools>div:nth-child(2){display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;}
+.project_tools>div:nth-child(2)>div{font-size: 13px; padding: 5px 10px;}
+.project_tools>div{
+    font-family: "Inter", serif;
+    font-weight: 600;
+}
+.info_part>div:nth-child(2){display: flex; justify-content: space-between;}
+.info_part>div:nth-child(2)>div{width: calc(100% / 2); padding-right: 20px;}
+.info_part>div:nth-child(2)>div:nth-child(2){margin-left: 30px;}
+#khleague .info_part>div:nth-child(2)>div:nth-child(2){margin-left: 50px;}
+.info_part>div:nth-child(2)>div>div>p:last-child{color: #7a7a7a; margin: 10px 0 30px 0;}
+.mine{display: flex; align-items: center;}
+.mine>p{color: #EEEAE6;}
+.line{width: 250px; height: 10px; background-color: #EEEAE6; margin: 0 20px; border-radius: 10px;}
+.my_part{margin-top: 100px;}
+.pront-end, .back-end{display: none;}
+.pront-end p, .back-end p{color: #4f4f4f; margin: 20px 0;}
+.pront-end .imgbtn:last-child, .back-end .imgbtn:last-child{margin-bottom: 0;}
+.imgbtn{margin-bottom: 50px; padding: 5px 10px; color: #8193b2; border: 2px solid #8193b2; border-radius: 5px; background-color: #fff;}
 
 /* ---------------------------------- */
 /* 반응형 1-스마트폰 */
 @media screen and (min-width:320px) {
     body{background: red;}
+    header{height: 50px;}
     .logo a{font-size: 20px;}
     .nav{font-size: 15px;}
     .sub_header div{
@@ -130,7 +208,7 @@ width: 100%; height: 100%; padding: 50px; display: flex; justify-content: space-
     .profile p:nth-child(4){margin-top: 20px;}
 
     /* skills */
-    .skills {flex-direction: column; align-items: center; padding: 20px; font-size: 13px;}
+    .skills {flex-direction: column; align-items: center; padding: 40px; font-size: 13px;}
     .skills_left, .skills_middle, .skills_right {width: 100%; margin-bottom: 20px;}
     .skill_title {font-size: 25px; text-align: left;}
     .java, .c, .mysql, .eclips, .vscode, .sts, .figma,
@@ -138,10 +216,27 @@ width: 100%; height: 100%; padding: 50px; display: flex; justify-content: space-
         font-size: 15px;
         padding: 5px 15px;
     }
+
+    /* project-view */
+    .project{grid-template-columns: 1fr; gap: 30px;}
+    .project_view{width: 400px; height: 100%;}
+    /* project-info */
+    .info{font-size: 14px;}
+    .info_top {grid-template-columns: 1fr;}
+    .info_part>div:nth-child(2){flex-direction: column;}
+    .info_part>div:nth-child(2)>div{width: calc(100%); padding-right: 0px;}
+    #khleague .info_part>div:nth-child(2)>div:nth-child(2) {margin-left: 0px;}
+    .info_part>div:nth-child(2)>div:nth-child(2){margin-left: 0px;}
+    .project_info{flex-direction: column;}
+    .project_nav>ul{display: flex;}
+    .project_nav>ul>li.on{border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 0px;}
+    .infobox{width: 100%;}
 }
+
 /* 반응형 1-태블릿 */
 @media screen and (min-width:768px) and (max-width:1024px){
     body{background: aliceblue;}
+    header{height: 60px;}
     .logo a{font-size: 25px;}
     .nav{font-size: 20px;}
     .sub_header div{
@@ -165,10 +260,27 @@ width: 100%; height: 100%; padding: 50px; display: flex; justify-content: space-
         font-size: 16px;
         padding: 5px 15px;
     }
+
+    /* project-view */
+    .project{grid-template-columns: 1fr 1fr; gap: 30px;}
+    .project_view{width: 400px; height: 100%;}
+    /* project-info */
+    .info{font-size: 16px;}
+    .info_top {grid-template-columns: 1fr 1fr;}
+    .info_part>div:nth-child(2){flex-direction: row;}
+    .info_part>div:nth-child(2)>div{width: calc(100% / 2); padding-right: 20px;}
+    #khleague .info_part>div:nth-child(2)>div:nth-child(2) {margin-left: 50px;}
+    .info_part>div:nth-child(2)>div:nth-child(2){margin-left: 30px;}
+    .project_info{flex-direction: column;}
+    .project_nav>ul{display: flex;}
+    .project_nav>ul>li.on{border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 0px;}
+    .infobox{width: 100%;}
 }
+
 /* 반응형 1-데스크탑 */
 @media screen and (min-width:1024px) {
-    body{background: pink;}
+    body{background: #3E5547;}
+    header{height: 70px;}
     .logo a{font-size: 30px;}
     .nav{font-size: 25px;}
     .sub_header div{
@@ -178,12 +290,13 @@ width: 100%; height: 100%; padding: 50px; display: flex; justify-content: space-
     /* about me */
     .aboutme {flex-direction: row; padding: 50px;}
     .aboutmiddle, .aboutright{margin-top: 0px;}
+    .aboutmiddle{margin: 0 100px;}
     .profile p:nth-child(1){font-size: 25px;}
     .profile p:nth-child(2){font-size: 25px;}
     .profile p:nth-child(4){margin-top: 20px;}
 
     /* skills */
-    .skills {flex-direction: row; align-items: baseline; padding: 50px; font-size: 14px;}
+    .skills {flex-direction: row; align-items: baseline; padding: 100px; font-size: 14px;}
     .skills_left, .skills_middle, .skills_right {width: 100%; margin-bottom: 20px;}
     .skill_title {font-size: 35px; text-align: center;}
     .java, .c, .mysql, .eclips, .vscode, .sts, .figma,
@@ -191,4 +304,19 @@ width: 100%; height: 100%; padding: 50px; display: flex; justify-content: space-
         font-size: 18px;
         padding: 5px 15px;
     }
+
+    /* project-view */
+    .project{grid-template-columns: 1fr 1fr; gap: 30px;}
+    .project_view{width: 600px; height: 400px;}
+    /* project-info */
+    .info{font-size: 16px;}
+    .info_top {grid-template-columns: 1fr 1fr;}
+    .info_part>div:nth-child(2){flex-direction: row;}
+    .info_part>div:nth-child(2)>div{width: calc(100% / 2); padding-right: 20px;}
+    #khleague .info_part>div:nth-child(2)>div:nth-child(2) {margin-left: 50px;}
+    .info_part>div:nth-child(2)>div:nth-child(2){margin-left: 30px;}
+    .project_info{flex-direction: row;}
+    .project_nav>ul{flex-direction: column;}
+    .project_nav>ul>li.on{border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-left-radius: 5px;}
+    .infobox{width: 1200px;}
 }
