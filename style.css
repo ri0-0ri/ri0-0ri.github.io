@@ -227,6 +227,18 @@ footer p{font-family: "Inter";}
 footer P>a:hover{color: #d50032; font-weight: 800;}
 footer span{position: absolute; top: 25; right: 0; font-size: 13px; margin-right: 5px;}
 
+/* modal */
+.modalbox img{width: 900px; height: 100%;}
+.leftbtn, .rightbtn{color: #fff; background-color: rgba(0, 0, 0, 0.3); padding: 5px; border-radius: 10px; cursor: pointer;}
+.leftbtn{margin-right: 20px;}
+.rightbtn{margin-left: 20px;}
+.modal_belt{overflow: hidden; width: 900px;}
+.modal_belt>ul{display: flex; transition: transform 0.5s ease;}
+.modalbox{display: flex; align-items: center; padding: 10px; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 15;}
+.modalbg{width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 10; background-color: rgba(0, 0, 0, 0.3);}
+.body{position: relative;}
+.modalbox, .modalbg{display: none;}
+
 /* ---------------------------------- */
 /* 반응형 1-스마트폰 */
 @media screen and (min-width:320px) {

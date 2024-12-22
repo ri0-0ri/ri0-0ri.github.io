@@ -125,5 +125,33 @@ $(document).ready(function(){
         var url = $(this).attr('href');
         window.open(url, '_blank');
     });
-    
+
+    let thismodal;
+    // 사진 모달
+    $('.project button').click(function(){
+        thismodalbox = $(this).next();
+        thismodalbox.css("display","flex");
+        $('.modalbg').show();
+    })
+    $('.modalbg').click(function(){
+        thismodalbox.hide();
+        $('.modalbg').hide();
+    })
+
+    // 모달 버튼
+    let modalbelt
+    $('.leftbtn').click(function(){
+        modalbelt = $(this).next().find('ul');
+        modalbelt.animate({left:"900px"},500,function(){
+            modalbelt.prepend(modalbelt.find("li").last());
+            modalbelt.css({left:0})
+        })
+    })
+    $('.rightbtn').click(function(){
+        modalbelt = $(this).prev().find('ul');
+        modalbelt.animate({left:"-900px"},500,function(){
+            modalbelt.append(modalbelt.find("li").first());
+            modalbelt.css({left:0})
+        })
+    })
 })
