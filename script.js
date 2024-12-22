@@ -2,12 +2,12 @@ $(document).ready(function(){
     // 헤더 스크롤
     $(window).scroll(function(){
         const sc = $(this).scrollTop();
-        // console.log(sc);
+        console.log(sc);
         let sctarget;
 
         if(sc<530){
             $('header').removeClass('header_sc');
-            $('.h_aboutme, .h_skills, .h_project, .h_contectme').removeClass('nav_sc');
+            $('.h_aboutme, .h_skills, .h_project, .h_contactme').removeClass('nav_sc');
             $('.logo>a').text('ri0-0ri');
         }
         else if(sc >= 530 && sc < 1200){
@@ -22,11 +22,17 @@ $(document).ready(function(){
             $('.h_skills').addClass('nav_sc');
             $('.h_skills').siblings().removeClass('nav_sc');
         }
-        else if(sc > 2000){
+        else if(sc >= 2000 && sc < 3200){
             $('.logo>a').text('Top');
             $('header').addClass('header_sc');
             $('.h_project').addClass('nav_sc');
             $('.h_project').siblings().removeClass('nav_sc');
+        }
+        else if(sc > 3200){
+            $('.logo>a').text('Top');
+            $('header').addClass('header_sc');
+            $('.h_contactme').addClass('nav_sc');
+            $('.h_contactme').siblings().removeClass('nav_sc');
         }
     })
 
@@ -36,17 +42,17 @@ $(document).ready(function(){
         let navname = $(this).attr('class');
         let sctarget;
 
-        if(navname=="h_aboutme"){
+        if(navname=="h_aboutme"||navname=="h_aboutme nav_sc"){
             sctarget = $('.aboutme').offset().top-200;
         }
-        else if(navname=="h_skills"){
-            sctarget = $('.skills').offset().top-100;
+        else if(navname=="h_skills"||navname=="h_skills nav_sc"){
+            sctarget = $('.skills').offset().top-50;
         }
-        else if(navname=="h_project"){
-            sctarget = $('.project').offset().top;
+        else if(navname=="h_project"||navname=="h_project nav_sc"){
+            sctarget = $('.project').offset().top-100;
         }
-        else if(navname=="h_contectme"){
-            sctarget = $('.contectme').offset().top;
+        else if(navname=="h_contactme"||navname=="h_contactme nav_sc"){
+            sctarget = $('.contactme').offset().top;
         }
         else{
             sctarget = 0;
@@ -70,6 +76,7 @@ $(document).ready(function(){
         let projectinfo = $(this).closest('.projectbox').find('.info');
         projectinfo.show();
         $(projectinfo).find('.introduction').show();
+        $(projectinfo).find('.pront-end, .back-end, .close').hide();
 
         $('html, body').animate({
             scrollTop: projectinfo.offset().top-100
@@ -109,4 +116,11 @@ $(document).ready(function(){
         $('.project .view').show();
     });
 
+    // 페이지 새창에서
+    $('body a').click(function(e) {
+        e.preventDefault();
+        var url = $(this).attr('href');
+        window.open(url, '_blank');
+    });
+    
 })

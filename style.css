@@ -24,10 +24,10 @@ body{background-color: #3E5547;}
     font-weight: normal;
     src: url('/font/FuturaCyrillicBold.woff') format('woff');
 }
-.sub_header div{
+.sub_header div, .contactme_title{
     font-family: 'FuturaPT E-Bold';
 }
-header div a, .skill_title{
+header div, .skill_title, .cboxtitle{
     font-family: 'Futura PT Bold';
 }
 .java, .c, .mysql, .eclips, .vscode, .sts, .figma,
@@ -47,16 +47,17 @@ header div a, .skill_title{
     font-style: normal;
 }
 
-body{padding-top: 80px;}
-/* 헤더 */
+body{padding-top: 80px; width: 100%;}
+/* header */
 header{width: 100%; height: 70px; display: flex; align-items: center; justify-content: space-between;
     color: #fff; background-color: #3E5547; position: fixed; top: 0; left: 0; right: 0; border-bottom: 2px solid #fff; z-index: 5;}
-.header_sc{color: #3E5547; background-color: #fff;}
+.header_sc{color: #3E5547; background-color: #fff; height: 50px;}
 .nav_sc{color: #F2E677;}
-.logo a{font-size: 30px; margin-left: 30px;}
+.logo{font-size: 30px; margin-left: 30px; cursor: pointer;}
 .nav{font-size: 25px; margin-right: 30px;}
 .nav ul{display: flex; gap: 30px;}
-/* 서브 헤더 */
+.nav>ul>li{cursor: pointer;}
+/* sub header */
 .sub_header{color: #fff; text-align: center; margin: 100px 0;}
 .sub_header .top div{width: 500px; border: 2px solid #fff; border-radius: 5px; margin: 0 auto;}
 .sub_header .top :nth-child(2){padding-bottom: 20px;}
@@ -130,34 +131,35 @@ width: 100%; height: 100%; padding: 50px; display: flex; margin-top: 100px;}
     padding: 5px 20px; border-radius: 6px; margin: 20px 0  10px 0;}
 .mybatis{font-size: 18px; color: #fff; background-color: #000; width: fit-content;
     padding: 5px 20px; border-radius: 6px; margin: 20px 0  10px 0;}
+.pinterest{font-size: 18px; color: #fff; background-color: #D32D2F; width: fit-content;
+        padding: 5px 20px; border-radius: 6px;}
 .backendbox p:nth-child(3), .backendbox p:nth-child(4), .backendbox p:nth-child(5){margin-top: 10px;}
 
 /* project */
-.project_wrap{padding: 50px;}
-.project{position: relative; width: 100%; margin-top: 150px; display: grid; grid-template-columns: 1fr 1fr; justify-items: center; gap: 50px; color: #3a3a3a;}
+.project_wrap{padding: 50px; height: max-content;}
+.project{width: 100%; height: max-content; margin-top: 100px; display: grid; justify-items: center; color: #3a3a3a;}
 .project_title{margin-bottom: 20px; font-size: 25px; color: #f2e677;}
 .project_view{width: 600px; height: 400px; background-color: #fff;
     border-radius: 5px; padding: 20px;}
 .project_time{margin: 30px 0;}
 .project_view>div>div{margin: 10px 0;}
-.light{width: 16px;}
 .view:hover{transform: scale(1.03); transition: transform 0.3s ease; cursor: pointer;}
-.info{display: none;}
-.info .project_title{position: absolute; top: 0; left: 0;}
-.project_info{width: 100%; display: flex; position: absolute; top: 65px; left: 0;}
+.info{display: none; height: max-content;}
+.project_info{width: 100%; display: flex; justify-content: left;}
 .project_nav>ul>li{color: #8193B2; padding: 15px 20px;}
 .project_nav>ul>li.on{background-color: #fff; border: none;}
-.infobox{background-color: #fff; width: 1200px; padding: 40px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
+.infobox{background-color: #fff; width: 1200px; height: 100%; padding: 40px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;}
 
 .info_top{display: grid; grid-template-columns: 1fr 1fr; gap: 100px;}
 .info_top>div>div>div{margin-bottom: 20px;}
 .info_part>div, .my_part>div{margin-bottom: 20px;}
-.info_top{margin-bottom: 100px;}
+.info_top{margin-bottom: 70px;}
+#my_portfolio .info_top{margin-bottom: 0;}
 /* .project_skills>div:nth-child(2){display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; gap: 10px;} */
 .project_skills>div:nth-child(2){display: flex; flex-wrap: wrap; gap: 10px;}
 .project_skills>div:nth-child(2)>div{font-size: 13px;}
 .project_skills div{margin: 0;}
-.project_tools{margin-top: 50px;}
+.project_tools, .project_site{margin-top: 50px;}
 .notion{font-size: 18px; color: #fff; background-color: #000; width: fit-content;
     padding: 5px 20px; border-radius: 6px;}
 .github{font-size: 18px; color: #fff; background-color: #EA4AAA; width: fit-content;
@@ -170,10 +172,13 @@ width: 100%; height: 100%; padding: 50px; display: flex; margin-top: 100px;}
     padding: 5px 20px; border-radius: 6px;}
 .project_tools>div:nth-child(2){display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;}
 .project_tools>div:nth-child(2)>div{font-size: 13px; padding: 5px 10px;}
-.project_tools>div{
+.project_tools>div, .project_site{
     font-family: "Inter", serif;
     font-weight: 600;
 }
+.project_site>div:nth-child(2){display: flex;}
+.project_site>div:nth-child(2)>div>a{display: block;}
+.project_site>div:nth-child(2)>div{margin-right: 10px; font-size: 13px; background-color: #EEEAE6; border: 2px solid #8193B2; color: #8193B2; padding: 5px 10px; border-radius: 5px;}
 .info_part>div:nth-child(2){display: flex; justify-content: space-between;}
 .info_part>div:nth-child(2)>div{width: calc(100% / 2); padding-right: 20px;}
 .info_part>div:nth-child(2)>div:nth-child(2){margin-left: 30px;}
@@ -182,16 +187,49 @@ width: 100%; height: 100%; padding: 50px; display: flex; margin-top: 100px;}
 .mine{display: flex; align-items: center;}
 .mine>p{color: #8193B2;}
 .line{width: 250px; height: 8px; background-color: #8193B2; margin: 0 20px; border-radius: 10px;}
-.my_part{margin-top: 100px;}
+.my_part{margin-top: 70px;}
 .pront-end, .back-end{display: none;}
 .pront-end p, .back-end p{color: #4f4f4f; margin: 20px 0;}
 .pront-end .imgbtn:last-child, .back-end .imgbtn:last-child{margin-bottom: 0;}
 .imgbtn{margin-bottom: 50px; padding: 5px 10px; color: #8193b2; border: 2px solid #8193b2; border-radius: 5px; background-color: #fff;}
+.portfolio_info{display: flex; align-items: center; justify-content: space-between;}
+.portfolio_info>button{margin-bottom: 0;}
+.nonp{display: none;}
+
+/* contact */
+.contactme_wrap{padding: 50px; text-align: center;}
+.contactme_title{font-size: 100px; color: #f2e677;}
+.contactme{text-align: center; display: flex; justify-content: center; width: 100%; height: 300px;}
+/* .contactbox1{position: absolute; top: 50px; left: 300px; z-index: -9998;} */
+.contactbox1{margin-top: 30px; position: relative;}
+.contactbox1 .clip{position: absolute;}
+.cbox1>button{position: absolute; top: 165px; left: 100px;}
+/* .contactbox2{position: absolute; top: 100px; right: 300px; z-index: -9999;} */
+.contactbox2{margin-top: 120px; margin-left: 130px; position: relative;}
+.contactbox2 .clip{position: absolute;}
+.cbox2>button{position: absolute; top: 165px; right: 100px;}
+.contactbox1:hover, .contactbox2:hover{cursor: pointer; transform: scale(1.03); transition: transform 0.3s ease;}
+
+.cboxtitle{font-size: 40px; color: #d50032;}
+.cboxtitle span{font-size: 60px;}
+.clip{font-size: 30px;}
+.contactme button{font-family: "Inter", serif; font-weight: 800; background-color: #EEEAE6; color: #8193B2; border: 2px solid #8193B2; border-radius: 5px; padding: 5px 20px;}
+.cbox1>div, .cbox2>div{font-family: "Futura PT Heavy"; color: #8193B2; background-color: #fff;
+    padding: 30px 25px 40px 25px; border-radius: 50px; margin:10px 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.contactme_txt{color: #fff; font-size: 14px;}
+.contactme_txt>p:first-child{font-family: "Inter";}
+.contactme_txt>p{margin: 10px 0;}
+
+/* footer */
+footer{position: relative; height: 50px; background-color: rgba(0, 0, 0, 0.5); color: #fff; display: flex; align-items: center; justify-content: center;}
+footer p{font-family: "Inter";}
+footer P>a:hover{color: #d50032; font-weight: 800;}
+footer span{position: absolute; top: 25; right: 0; font-size: 13px; margin-right: 5px;}
 
 /* ---------------------------------- */
 /* 반응형 1-스마트폰 */
 @media screen and (min-width:320px) {
-    body{background: red;}
     header{height: 50px;}
     .logo a{font-size: 20px;}
     .nav{font-size: 15px;}
@@ -231,11 +269,27 @@ width: 100%; height: 100%; padding: 50px; display: flex; margin-top: 100px;}
     .project_nav>ul{display: flex;}
     .project_nav>ul>li.on{border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 0px;}
     .infobox{width: 100%;}
+    .portfolio_info{flex-direction: column;}
+    .portfolio_info button{margin-top: 10px;}
+
+    /* contactme */
+    .contactbox1{margin-top: 30px;}
+    .contactbox2{margin-top: 180px; margin-left: 0px;}
+    .cboxtitle{font-size: 30px;}
+    .cboxtitle span{font-size: 50px;}
+    .contactme_title{font-size: 70px;}
+
+    .contactbox1 .clip{top: 45px; left: 200px;}
+    .contactbox2 .clip{top: 55px; left: 210px;}
+    .cbox1>button{top: 130px; left: 80px;}
+    .cbox2>button{top: 130px; right: 80px;}
+    .cbox1>div, .cbox2>div{padding: 30px 20px 30px 20px; border-radius: 50px; margin:0px;}
+    .contactme_txt{margin-top: 90px;}
+    footer span{display: none;}
 }
 
 /* 반응형 1-태블릿 */
 @media screen and (min-width:768px) and (max-width:1024px){
-    body{background: aliceblue;}
     header{height: 60px;}
     .logo a{font-size: 25px;}
     .nav{font-size: 20px;}
@@ -262,7 +316,7 @@ width: 100%; height: 100%; padding: 50px; display: flex; margin-top: 100px;}
     }
 
     /* project-view */
-    .project{grid-template-columns: 1fr 1fr; gap: 30px;}
+    .project{grid-template-columns: 1fr; gap: 30px;}
     .project_view{width: 400px; height: 100%;}
     /* project-info */
     .info{font-size: 16px;}
@@ -275,11 +329,27 @@ width: 100%; height: 100%; padding: 50px; display: flex; margin-top: 100px;}
     .project_nav>ul{display: flex;}
     .project_nav>ul>li.on{border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 0px;}
     .infobox{width: 100%;}
+    .portfolio_info{flex-direction: column;}
+    .portfolio_info button{margin-top: 10px;}
+
+    /* contactme */
+    .contactbox1{margin-top: 30px;}
+    .contactbox2{margin-top: 120px; margin-left: 130px;}
+    .cboxtitle{font-size: 30px;}
+    .cboxtitle span{font-size: 50px;}
+    .contactme_title{font-size: 90px;}
+
+    .contactbox1 .clip{top: 55px; left: 220px;}
+    .contactbox2 .clip{top: 55px; left: 220px;}
+    .cbox1>button{top: 150px; left: 100px;}
+    .cbox2>button{top: 150px; right: 100px;}
+    .cbox1>div, .cbox2>div{padding: 30px 25px 40px 25px; border-radius: 50px; margin:10px 20px;}
+    .contactme_txt{margin-top: 70px;}
+    footer span{display: block;}
 }
 
 /* 반응형 1-데스크탑 */
 @media screen and (min-width:1024px) {
-    body{background: #3E5547;}
     header{height: 70px;}
     .logo a{font-size: 30px;}
     .nav{font-size: 25px;}
@@ -306,7 +376,7 @@ width: 100%; height: 100%; padding: 50px; display: flex; margin-top: 100px;}
     }
 
     /* project-view */
-    .project{grid-template-columns: 1fr 1fr; gap: 30px;}
+    .project{grid-template-columns: 1fr 1fr; gap: 50px;}
     .project_view{width: 600px; height: 400px;}
     /* project-info */
     .info{font-size: 16px;}
@@ -319,4 +389,21 @@ width: 100%; height: 100%; padding: 50px; display: flex; margin-top: 100px;}
     .project_nav>ul{flex-direction: column;}
     .project_nav>ul>li.on{border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-left-radius: 5px;}
     .infobox{width: 1200px;}
+    .portfolio_info{flex-direction: row;}
+    .portfolio_info button{margin-top: 0px;}
+
+     /* contactme */
+    .contactbox1{margin-top: 30px;}
+    .contactbox2{margin-top: 120px; margin-left: 130px;}
+    .cboxtitle{font-size: 40px;}
+    .cboxtitle span{font-size: 60px;}
+    .contactme_title{font-size: 100px;}
+
+    .contactbox1 .clip{top: 70px; left: 220px;}
+    .contactbox2 .clip{top: 70px; left: 220px;}
+    .cbox1>button{top: 165px; left: 100px;}
+    .cbox2>button{top: 165px; right: 100px;}
+    .cbox1>div, .cbox2>div{padding: 30px 25px 40px 25px; border-radius: 50px; margin:10px 20px;}
+    .contactme_txt{margin-top: 70px;}
+    footer span{display: block;}
 }
