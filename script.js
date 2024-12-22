@@ -76,6 +76,7 @@ $(document).ready(function(){
         let projectinfo = $(this).closest('.projectbox').find('.info');
         projectinfo.show();
         $(projectinfo).find('.introduction').show();
+        $('.project').css("grid-template-columns", "1fr");
         $(projectinfo).find('.pront-end, .back-end, .close').hide();
 
         $('html, body').animate({
@@ -88,8 +89,10 @@ $(document).ready(function(){
             $(this).siblings().removeClass('on');
             $(this).addClass('on');
     
+            // 닫기
             if($(this).text().trim()=="Close"){
                 $('.project .info').hide();
+                $('.project').css("grid-template-columns", "1fr 1fr");
                 $('.project .view').show();
 
                 $(this).removeClass('on');

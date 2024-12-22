@@ -146,7 +146,7 @@ width: 100%; height: 100%; padding: 50px; display: flex; margin-top: 100px;}
 .view:hover{transform: scale(1.03); transition: transform 0.3s ease; cursor: pointer;}
 .info{display: none; height: max-content;}
 .project_info{width: 100%; display: flex; justify-content: left;}
-.project_nav>ul>li{color: #8193B2; padding: 15px 20px;}
+.project_nav>ul>li{color: #8193B2; padding: 15px 20px; cursor: pointer;}
 .project_nav>ul>li.on{background-color: #fff; border: none;}
 .infobox{background-color: #fff; width: 1200px; height: 100%; padding: 40px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;}
 
