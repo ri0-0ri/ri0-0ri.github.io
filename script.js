@@ -75,9 +75,9 @@ $(document).ready(function(){
         $('.project .view, .project .info').hide();
         let projectinfo = $(this).closest('.projectbox').find('.info');
         projectinfo.show();
+        $(projectinfo).find('.front-end, .back-end, .close').hide();
         $(projectinfo).find('.introduction').show();
         $('.project').css("grid-template-columns", "1fr");
-        $(projectinfo).find('.front-end, .back-end, .close').hide();
 
         $('html, body').animate({
             scrollTop: projectinfo.offset().top-100
