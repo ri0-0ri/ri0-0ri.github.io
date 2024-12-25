@@ -77,7 +77,7 @@ $(document).ready(function(){
         projectinfo.show();
         $(projectinfo).find('.introduction').show();
         $('.project').css("grid-template-columns", "1fr");
-        $(projectinfo).find('.pront-end, .back-end, .close').hide();
+        $(projectinfo).find('.front-end, .back-end, .close').hide();
 
         $('html, body').animate({
             scrollTop: projectinfo.offset().top-100
@@ -99,15 +99,15 @@ $(document).ready(function(){
                 $('.project_nav>ul>li:first-child').addClass('on');
             }
             else if($(this).text().trim()=="introduction"){
-                $('.pront-end, .back-end, .close').hide();
+                $('.front-end, .back-end, .close').hide();
                 $(projectinfo).find('.introduction').show();
             }
-            else if($(this).text().trim()=="Pront-end"){
+            else if($(this).text().trim()=="Front-end"){
                 $('.introduction, .back-end, .close').hide();
-                $(projectinfo).find('.pront-end').show();
+                $(projectinfo).find('.front-end').show();
             }
             else if($(this).text().trim()=="Back-end"){
-                $('.introduction, .pront-end, .close').hide();
+                $('.introduction, .front-end, .close').hide();
                 $(projectinfo).find('.back-end').show();
             }
         })

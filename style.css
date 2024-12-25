@@ -188,10 +188,11 @@ width: 100%; height: 100%; padding: 50px; display: flex; margin-top: 100px;}
 .mine>p{color: #8193B2;}
 .line{width: 250px; height: 8px; background-color: #8193B2; margin: 0 20px; border-radius: 10px;}
 .my_part{margin-top: 70px;}
-.pront-end, .back-end{display: none;}
-.pront-end p, .back-end p{color: #4f4f4f; margin: 20px 0;}
-.pront-end .imgbtn:last-child, .back-end .imgbtn:last-child{margin-bottom: 0;}
-.imgbtn{margin-bottom: 50px; padding: 5px 10px; color: #8193b2; border: 2px solid #8193b2; border-radius: 5px; background-color: #fff;}
+.front-end, .back-end{display: none;}
+.front-end p, .back-end p{color: #4f4f4f; margin: 20px 0;}
+.front-end .imgbtn:last-of-type, .back-end .imgbtn:last-of-type{margin-bottom: 0;}
+.imgbtn{transition: background-color 0.5s ease, color 0.5s ease; margin-bottom: 50px; padding: 5px 10px; color: #8193b2; border: 2px solid #8193b2; border-radius: 5px; background-color: #fff;}
+.imgbtn:hover{background-color: #8193B2; color: #fff;}
 .portfolio_info{display: flex; align-items: center; justify-content: space-between;}
 .portfolio_info>button{margin-bottom: 0;}
 .nonp{display: none;}
@@ -228,12 +229,15 @@ footer P>a:hover{color: #d50032; font-weight: 800;}
 footer span{position: absolute; top: 25; right: 0; font-size: 13px; margin-right: 5px;}
 
 /* modal */
-.modalbox img{width: 900px; height: 100%;}
+.modalbox img{height: 100%; width: 900px;} 
+.modal_belt{overflow: hidden; width: 900px;}
+.modal_belt>ul{display: flex; transition: transform 0.5s ease;}
+#kh_table img{width: 600px;}
+#kh_table .modal_belt{overflow: hidden; width: 600px;}
+
 .leftbtn, .rightbtn{color: #fff; background-color: rgba(0, 0, 0, 0.3); padding: 5px; border-radius: 10px; cursor: pointer;}
 .leftbtn{margin-right: 20px;}
 .rightbtn{margin-left: 20px;}
-.modal_belt{overflow: hidden; width: 900px;}
-.modal_belt>ul{display: flex; transition: transform 0.5s ease;}
 .modalbox{display: flex; align-items: center; padding: 10px; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 15;}
 .modalbg{width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 10; background-color: rgba(0, 0, 0, 0.3);}
 .body{position: relative;}
