@@ -1,6 +1,7 @@
 $(document).ready(function(){
     // 헤더 스크롤
     $(window).scroll(function(){
+        $('.topbtn').show();
         const sc = $(this).scrollTop();
         console.log(sc);
         let sctarget;
@@ -9,6 +10,7 @@ $(document).ready(function(){
             $('header').removeClass('header_sc');
             $('.h_aboutme, .h_skills, .h_project, .h_contactme').removeClass('nav_sc');
             $('.logo>a').text('ri0-0ri');
+            $('.topbtn').hide();
         }
         else if(sc >= 530 && sc < 1200){
             $('.logo>a').text('Top');
@@ -34,6 +36,13 @@ $(document).ready(function(){
             $('.h_contactme').addClass('nav_sc');
             $('.h_contactme').siblings().removeClass('nav_sc');
         }
+    })
+
+    // top
+    $('.topbtn').click(function(){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000);
     })
 
     // 헤더 네비게이션

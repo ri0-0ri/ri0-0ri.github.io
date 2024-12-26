@@ -232,8 +232,6 @@ footer span{position: absolute; top: 25; right: 0; font-size: 13px; margin-right
 .modalbox img{height: 100%; width: 900px;} 
 .modal_belt{overflow: hidden; width: 900px;}
 .modal_belt>ul{display: flex; transition: transform 0.5s ease;}
-#kh_table img{width: 600px;}
-#kh_table .modal_belt{overflow: hidden; width: 600px;}
 
 .leftbtn, .rightbtn{color: #fff; background-color: rgba(0, 0, 0, 0.3); padding: 5px; border-radius: 10px; cursor: pointer;}
 .leftbtn{margin-right: 20px;}
@@ -242,6 +240,11 @@ footer span{position: absolute; top: 25; right: 0; font-size: 13px; margin-right
 .modalbg{width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 10; background-color: rgba(0, 0, 0, 0.3);}
 .body{position: relative;}
 .modalbox, .modalbg{display: none;}
+#wdmiddle{width: 750px;}
+
+/* topbtn */
+.topbtn{position: fixed; bottom: 20px; right: 20px; color: #fff; background-color: rgba(0, 0, 0, 0.3); padding: 5px; border-radius: 10px; cursor: pointer; display: none;}
+.topbtn:hover{background-color: rgba(255, 255, 255, 0.5);}
 
 /* ---------------------------------- */
 /* 반응형 1-스마트폰 */
@@ -302,6 +305,11 @@ footer span{position: absolute; top: 25; right: 0; font-size: 13px; margin-right
     .cbox1>div, .cbox2>div{padding: 30px 20px 30px 20px; border-radius: 50px; margin:0px;}
     .contactme_txt{margin-top: 90px;}
     footer span{display: none;}
+
+    /* modal */
+    .modalbox img{width: 400px;} 
+    .modal_belt{width: 400px;}
+    #wdmiddle{width: 400px;}
 }
 
 /* 반응형 1-태블릿 */
@@ -362,6 +370,11 @@ footer span{position: absolute; top: 25; right: 0; font-size: 13px; margin-right
     .cbox1>div, .cbox2>div{padding: 30px 25px 40px 25px; border-radius: 50px; margin:10px 20px;}
     .contactme_txt{margin-top: 70px;}
     footer span{display: block;}
+
+    /* modal */
+    .modalbox img{width: 700px;} 
+    .modal_belt{width: 700px;}
+    #wdmiddle{width: 700px;}
 }
 
 /* 반응형 1-데스크탑 */
@@ -422,4 +435,9 @@ footer span{position: absolute; top: 25; right: 0; font-size: 13px; margin-right
     .cbox1>div, .cbox2>div{padding: 30px 25px 40px 25px; border-radius: 50px; margin:10px 20px;}
     .contactme_txt{margin-top: 70px;}
     footer span{display: block;}
+
+    /* modal */
+    .modalbox img{width: 900px;} 
+    .modal_belt{width: 900px;}
+    #wdmiddle{width: 750px;}
 }
