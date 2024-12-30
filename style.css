@@ -87,10 +87,11 @@ width: 100%; height: 100%; padding: 50px; display: flex; margin-top: 100px;}
 }
 .myinfo{margin-top: 50px; display: grid; grid-template-columns: 150px 1fr; gap: 10px;}
 .myinfo p{font-size: 14px;}
-.educationbox{margin-top: 20px; display: grid; grid-template-columns: 60px 1fr; gap: 20px;}
+.educationbox{margin-top: 20px; display: grid; grid-template-columns: 60px 1fr; gap: 10px;}
 .licensebox{margin-top: 20px; display: grid; grid-template-columns: 60px 1fr; gap: 15px 20px;}
 .licensebox p:nth-child(11), .licensebox p:nth-child(12){margin-top: 20px;}
-.major, .licensebox p:nth-child(13){grid-column: span 2; font-size: 14px; padding-left: 80px; color: #7a7a7a;}
+.major{grid-column: span 2; font-size: 14px; padding-left: 70px; color: #7a7a7a;}
+.licensebox p:nth-child(13){grid-column: span 2; font-size: 14px; padding-left: 80px; color: #7a7a7a;}
 
 /* skills */
 .skills{width: 100%; height: 100%; background-color: #EEEAE6;font-size: 14px;
@@ -226,6 +227,7 @@ width: 100%; height: 100%; padding: 50px; display: flex; margin-top: 100px;}
 footer{position: relative; height: 50px; background-color: rgba(0, 0, 0, 0.5); color: #fff; display: flex; align-items: center; justify-content: center;}
 footer p{font-family: "Inter";}
 footer P>a:hover{color: #d50032; font-weight: 800;}
+.contactme_txt>p>a:hover{font-family: "Inter"; color: #d50032; font-weight: 800;}
 footer span{position: absolute; top: 25; right: 0; font-size: 13px; margin-right: 5px;}
 
 /* modal */
